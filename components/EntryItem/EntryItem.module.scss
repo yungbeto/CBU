@@ -1,0 +1,94 @@
+@import "../../styles/breakpoints.scss";
+.container {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  max-width: 60rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border: 1px solid #333;
+  &:hover {
+    background: #fafafa;
+  }
+
+  @media (min-width: 560px) {
+    border: none;
+    flex-direction: row;
+    max-height: 160px;
+    margin-bottom: 0px;
+    box-shadow: inset 0px -1px 0px #333333;
+    &:last-of-type {
+      box-shadow: none;
+    }
+  }
+}
+.first {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  height: 100%;
+  @media (min-width: 560px) {
+    min-width: 160px;
+    min-height: 160px;
+    padding: 0.5rem;
+  }
+}
+.thumb {
+  width: auto;
+  height: auto;
+}
+.second {
+  padding: 0 1rem 1.5rem 1rem;
+  width: auto;
+  overflow: hidden;
+  @media (min-width: 560px) {
+    padding: 0.5rem 1.5rem 1.5rem 0.5rem;
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 0;
+}
+.date {
+  font-size: 0.8rem;
+  line-height: 1rem;
+  font-weight: 400;
+  color: #828282;
+  margin: 0;
+}
+
+.body {
+  color: #4f4f4f;
+  margin: 0.5rem 0 0 0;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.seemore {
+  font-family: IBM Plex Mono;
+  margin-top: 0.4rem;
+  border: none;
+  padding: 0;
+  background: none;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:after {
+    content: " ↓";
+  }
+
+  &:hover {
+    color: #222;
+  }
+}
