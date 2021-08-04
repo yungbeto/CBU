@@ -1,7 +1,9 @@
 import styles from './Header.module.css'
 import Image from 'next/image'
 
-const gifs = [
+
+export default function Header() {
+    const gifs = [
             '/gifs/cbu01.gif',
             '/gifs/cbu02.gif',
             '/gifs/cbu03.gif',
@@ -14,8 +16,6 @@ const gifs = [
 const randomGif = gifs[Math.floor(Math.random() * gifs.length)]
 
 const name = 'Cool Breeze Unlimited'
-
-export default function Header() {
     return(
             <header className={styles.header}>
                         <Image
