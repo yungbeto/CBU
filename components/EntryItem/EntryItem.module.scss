@@ -8,6 +8,7 @@
   font-size: 1rem;
   line-height: 1.5rem;
   border: 1px solid #333;
+  transition: height 0.33s ease-in;
   &:hover {
     background: #fafafa;
   }
@@ -15,7 +16,6 @@
   @media (min-width: 560px) {
     border: none;
     flex-direction: row;
-    max-height: 160px;
     margin-bottom: 0px;
     box-shadow: inset 0px -1px 0px #333333;
     &:last-of-type {
@@ -23,6 +23,7 @@
     }
   }
 }
+
 .first {
   padding: 1rem;
   display: flex;
@@ -31,20 +32,34 @@
   height: 100%;
   @media (min-width: 560px) {
     min-width: 160px;
-    min-height: 160px;
+    max-width: 160px;
+    height: auto;
     padding: 0.5rem;
   }
 }
-.thumb {
-  width: auto;
-  height: auto;
-}
+// .thumb {
+//   width: 144px;
+//   height: 144px;
+// }
 .second {
   padding: 0 1rem 1.5rem 1rem;
   width: auto;
   overflow: hidden;
+  max-height: 480px;
   @media (min-width: 560px) {
     padding: 0.5rem 1.5rem 1.5rem 0.5rem;
+    max-height: 160px;
+  }
+}
+
+.secondOpen {
+  padding: 0 1rem 1.5rem 1rem;
+  width: auto;
+  overflow: hidden;
+  max-height: auto;
+  @media (min-width: 560px) {
+    padding: 0.5rem 1.5rem 1.5rem 0.5rem;
+    max-height: auto;
   }
 }
 
@@ -73,6 +88,16 @@
   text-overflow: ellipsis;
 }
 
+.bodyOpen {
+  color: #4f4f4f;
+  margin: 0.5rem 0 0 0;
+  display: block;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: vertical;
+  overflow: visible;
+  text-overflow: unset;
+}
+
 .seemore {
   font-family: IBM Plex Mono;
   margin-top: 0.4rem;
@@ -83,10 +108,6 @@
   line-height: 1.5rem;
   text-decoration: underline;
   cursor: pointer;
-
-  &:after {
-    content: " ↓";
-  }
 
   &:hover {
     color: #222;
