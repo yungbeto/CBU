@@ -1,54 +1,29 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/utils.module.css'
-import { getSortedPostsData } from '../lib/posts'
-// import Link from 'next/link'
-// import Date from '../components/date'
-import List from '../components/List'
-
+import Head from "next/head";
+import Layout, { siteTitle } from "../components/layout";
+import styles from "./pages.module.scss";
+import { getSortedPostsData } from "../lib/posts";
+import Player from "../components/Player";
+import List from "../components/List";
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
+  const allPostsData = getSortedPostsData();
   return {
     props: {
-      allPostsData
-    }
-  }
+      allPostsData,
+    },
+  };
 }
 
 export default function Home({ allPostsData }) {
   return (
-    <Layout home>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-      <List />
-{/* 
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <ul className={utilStyles.list}>
-          {/* {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li> 
-          ))}
-          <EntryItem />
-          <EntryItem />
-          <EntryItem />
-          <EntryItem />
-          <EntryItem />
-          <EntryItem />
-          <EntryItem />
-          <EntryItem />
-          <EntryItem />
-        </ul>
-      </section> */}
-
-    </Layout>
-  )
+    <section className={styles.container}>
+      <Layout home>
+        <Head>
+          <title>{siteTitle}</title>
+        </Head>
+        <List />
+      </Layout>
+      <Player />
+    </section>
+  );
 }
