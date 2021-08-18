@@ -88,6 +88,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: pre-line;
 }
 
 .bodyOpen {
@@ -98,6 +99,7 @@
   -webkit-box-orient: vertical;
   overflow: visible;
   text-overflow: unset;
+  white-space: pre-line;
 }
 
 .seemore {

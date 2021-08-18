@@ -1,13 +1,14 @@
-import styles from './List.module.scss'
-import EntryItem from '../EntryItem'
+import styles from './List.module.scss';
+import EntryItem from '../EntryItem';
+import data from './data';
 
-export default function List() {
-    return(
+export default function List(props) {
 
+  return (
 
-<section>
-        <ul className={styles.list}>
-          {/* {allPostsData.map(({ id, date, title }) => (
+    <section>
+      <ul className={styles.list}>
+        {/* {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
@@ -18,16 +19,11 @@ export default function List() {
               </small>
             </li> 
           ))}*/}
-          <EntryItem />
-          <EntryItem />
-          <EntryItem />
-          <EntryItem />
-          <EntryItem />
-          <EntryItem />
-          <EntryItem />
-          <EntryItem />
-          <EntryItem />
-        </ul>
-      </section>
-    )
+          
+          {data.reverse().map(({ title, date, info }) => (    
+          <EntryItem title={title} date={date} info={info} /> ) )}
+
+      </ul>
+    </section>
+  )
 }
