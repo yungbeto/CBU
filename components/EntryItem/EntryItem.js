@@ -7,7 +7,7 @@ const EntryItem = (props, {expand}) => {
     const [isExpanded, setIsExpanded] = useState(expand);
 
     return(
-        <li className={styles.container}>
+        <li key={props.key} className={styles.container}>
             <div className={styles.first}>
             <Image 
             className={styles.thumb}

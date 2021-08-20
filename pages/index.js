@@ -3,27 +3,31 @@ import Layout, { siteTitle } from "../components/layout";
 import styles from "./pages.module.scss";
 import { getSortedPostsData } from "../lib/posts";
 import Player from "../components/Player";
-import List from "../components/List";
+import EntryItem from "../components/EntryItem";
+
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = getSortedPostsData()
   return {
     props: {
-      allPostsData,
-    },
-  };
+      allPostsData
+    }
+  }
 }
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData, postBody }) {
   return (
     <section className={styles.container}>
       <Layout home>
         <Head>
           <title>{siteTitle}</title>
         </Head>
-        <List />
+        <ul className={styles.list}>
+          {allPostsData.map(({ slug, date, title, url }) => (
+            <EntryItem key={url} title={title} date={date} info={slug} />
+          ))}
+        </ul>
       </Layout>
-      <Player />
     </section>
   );
 }

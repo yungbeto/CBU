@@ -2,3 +2,13 @@
   overflow: hidden;
   height: 100vh;
 }
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 3rem 0 1rem 0;
+  overflow-y: scroll;
+  @media (min-width: 560px) {
+    border: 1px solid #333;
+  }
+}
