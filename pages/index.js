@@ -15,7 +15,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function Home({ allPostsData, postBody }) {
+export default function Home({ allPostsData }) {
   return (
     <section className={styles.container}>
       <Layout home>
