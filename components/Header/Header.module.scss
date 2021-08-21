@@ -16,6 +16,9 @@
   line-height: 48px;
   color: #222;
   margin: 1rem 0 0 0;
+  &:hover{
+    cursor:pointer;
+  }
 }
 
 .subheading {

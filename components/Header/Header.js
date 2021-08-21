@@ -1,5 +1,6 @@
-import styles from './Header.module.css'
+import styles from './Header.module.scss'
 import Image from 'next/image'
+import Link from 'next/link'
 
 
 export default function Header() {
@@ -26,7 +27,10 @@ const name = 'Cool Breeze Unlimited'
                     width={144}
                     alt={name}
                 />
+                <Link href='/'>
+
                 <h1 className={styles.heading}>{name}</h1>
+                </Link>
                 <p className={styles.subheading}>A series of mixes by <a href="https://dorissaturday.bandcamp.com/" target="_blank">Doris Saturday</a> fostering positive beach energy</p>
     </header>
     )

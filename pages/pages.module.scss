@@ -1,6 +1,9 @@
 .container {
-  overflow: hidden;
-  height: 100vh;
+  overflow: scroll;
+  height: calc(100vh - 80px);
+  @media (min-width: 560px) {
+    height: 100%;
+  }
 }
 
 .list {

@@ -1,16 +1,18 @@
 .player {
-  width: calc(100vw - 32px);
-margin: auto;
+  height: 5rem;
+  width: 100%;
+  margin: auto;
   padding: 24px;
   position: sticky;
-  bottom: 32px;
-  left: 16px;
+  bottom: 0px;
   background: #fff;
-  border: 1px solid #333;
+  border-top: 1px solid #333;
   @media (min-width: 560px) {
     width: 20rem;
-    bottom: 32px;
-    left: 16px;
+    bottom: 1rem;
+    left: 1rem;
     margin: 0;
+    position: fixed;
+    border: 1px solid #333;
   }
 }

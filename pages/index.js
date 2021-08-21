@@ -2,7 +2,6 @@ import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import styles from "./pages.module.scss";
 import { getSortedPostsData } from "../lib/posts";
-import Player from "../components/Player";
 import EntryItem from "../components/EntryItem";
 
 
@@ -23,8 +22,8 @@ export default function Home({ allPostsData }) {
           <title>{siteTitle}</title>
         </Head>
         <ul className={styles.list}>
-          {allPostsData.map(({ slug, date, title, url }) => (
-            <EntryItem key={url} title={title} date={date} info={slug} />
+          {allPostsData.map(({ slug, date, title, url, id }) => (
+            <EntryItem key={url} title={title} date={date} info={slug} id={id} />
           ))}
         </ul>
       </Layout>
