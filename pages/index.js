@@ -1,20 +1,21 @@
-import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
-import styles from "./pages.module.scss";
-import { getSortedPostsData } from "../lib/posts";
-import EntryItem from "../components/EntryItem";
-
+import Head from 'next/head';
+import { useState } from 'react';
+import Layout, { siteTitle } from '../components/layout';
+import styles from './pages.module.scss';
+import { getSortedPostsData } from '../lib/posts';
+import EntryItem from '../components/EntryItem';
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
+  const allPostsData = getSortedPostsData();
   return {
     props: {
-      allPostsData
-    }
-  }
+      allPostsData,
+    },
+  };
 }
 
 export default function Home({ allPostsData }) {
+  const [playing, isPlaying] = useState(0);
   return (
     <section className={styles.container}>
       <Layout home>
@@ -22,8 +23,9 @@ export default function Home({ allPostsData }) {
           <title>{siteTitle}</title>
         </Head>
         <ul className={styles.list}>
-          {allPostsData.map(({ slug, date, title, url, id }) => (
-            <EntryItem key={url} title={title} date={date} info={slug} id={id} />
+          {allPostsData.map((post) => (
+            // We can spread all the props into the componet with {...anything}
+            <EntryItem {...post} />
           ))}
         </ul>
       </Layout>
