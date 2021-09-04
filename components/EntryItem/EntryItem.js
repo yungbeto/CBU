@@ -1,19 +1,25 @@
 import styles from './EntryItem.module.scss'
-import Image from 'next/image'
-import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { play, stop } from '../../src/features/isPlaying/isPlayingSlice';
 import Link from 'next/link'
 import Play from '../../components/Icons/Play';
 import Pause from '../../components/Icons/Pause';
 
-const EntryItem = (props, {expand}) => {
+const EntryItem = (props) => {
 
     // const [isExpanded, setIsExpanded] = useState(expand);
-    const [isPlaying, setIsPlaying] = useState('');
+    // const [isPlaying, setIsPlaying] = useState('');
+    const isPlaying = useSelector((state) => state.isPlaying.value);
+    const dispatch = useDispatch()
 
     return(
         <li key={props.key} className={styles.container}>
             <div className={styles.first}>
-            <button onClick={() => setIsPlaying(!isPlaying)}>{isPlaying ? <Pause /> : <Play />}</button>
+            {!isPlaying ?
+            <button onClick={() => dispatch(play())}><Play /></button>
+            :
+            <button onClick={() => dispatch(stop())}><Pause /></button>
+             }
             </div>
             <div className= {styles.secondOpen}>
                 
@@ -24,7 +30,6 @@ const EntryItem = (props, {expand}) => {
             
                 <h6 className={styles.date}>{props.date}</h6>
                 <p className= {styles.bodyOpen}>{props.info}</p>
-                {/* <button onClick={() => setIsExpanded(!isExpanded) } className={styles.seemore}>{isExpanded ? 'Hide details ↑ ' : 'Show details ↓'} </button> */}
             </div>
         </li>
     )
