@@ -6,19 +6,19 @@ import Play from '../../components/Icons/Play';
 import Pause from '../../components/Icons/Pause';
 
 const EntryItem = (props) => {
-
+    console.log(props)
     // const [isExpanded, setIsExpanded] = useState(expand);
     // const [isPlaying, setIsPlaying] = useState('');
     const isPlaying = useSelector((state) => state.isPlaying.value);
     const dispatch = useDispatch()
 
     return(
-        <li key={props.key} className={styles.container}>
+        <li key={props.url} className={styles.container}>
             <div className={styles.first}>
             {!isPlaying ?
-            <button onClick={() => dispatch(play())}><Play /></button>
+            <button onClick={() => dispatch(play({title: props.title, url: props.url}))}><Play /></button>
             :
-            <button onClick={() => dispatch(stop())}><Pause /></button>
+            <button onClick={() => dispatch(stop(props.title))}><Pause /></button>
              }
             </div>
             <div className= {styles.secondOpen}>

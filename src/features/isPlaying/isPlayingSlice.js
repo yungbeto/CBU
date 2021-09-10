@@ -2,17 +2,27 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     value: false,
+    isCurrentlyPlaying: '',
+    songUrl: '',
 }
 
 export const isPlayingSlice = createSlice({
     name: 'isPlaying',
     initialState,
     reducers:{
-        play: (state) =>{
-            state.value = true
+        play: (state, action) =>{
+            const { title, url} = action.payload
+            console.log('state: ',state)
+            console.log("action: ",action)
+            state.isCurrentlyPlaying = title
+            state.songUrl = url
+
+            state.value = !state.value
         },
-        stop: (state) => {
-            state.value = false
+        stop: (state, action) => {
+            state.isCurrentlyPlaying = ''
+            state.songUrl = ''
+            state.value = !state.value
         },
     }
 })
