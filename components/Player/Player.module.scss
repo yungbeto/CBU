@@ -1,14 +1,14 @@
 .player {
-  height: 5rem;
+  min-height: 5rem;
   width: 100%;
   margin: auto;
-  padding: 24px;
+  padding: 8px 24px;
   position: sticky;
   bottom: 0px;
   background: #fff;
   border-top: 1px solid #333;
   @media (min-width: 560px) {
-    width: 20rem;
+    width: 32rem;
     bottom: 1rem;
     left: 1rem;
     margin: 0;
