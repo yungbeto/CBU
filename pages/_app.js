@@ -1,4 +1,5 @@
 import "../styles/global.scss";
+import "../pages/plyr.css"
 import Player from "../components/Player";
 import { store } from "../src/app/store";
 import { Provider } from 'react-redux';

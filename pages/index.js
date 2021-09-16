@@ -3,6 +3,7 @@ import Layout, { siteTitle } from "../components/layout";
 import styles from "./pages.module.scss";
 import { getSortedPostsData } from "../lib/posts";
 import EntryItem from "../components/EntryItem";
+import { useSelector } from 'react-redux';
 
 
 export async function getStaticProps() {
@@ -15,8 +16,10 @@ export async function getStaticProps() {
 }
 
 export default function Home({ allPostsData }) {
+  const isPlaying = useSelector((state) => state.isPlaying.value);
   return (
-    <section className={styles.container}>
+    
+    <section className={!isPlaying ? `${styles.container_notPlaying}` : `${styles.container}`}>
       <Layout home>
         <Head>
           <title>{siteTitle}</title>

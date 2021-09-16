@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,700&display=swap');
+
 .header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: #ffffff;
+  color: #455587;
 }
 .gif {
   width: 6rem;
@@ -11,10 +13,11 @@
 }
 
 .heading {
+  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 600;
   font-size: 36px;
   line-height: 48px;
-  color: #222;
+  color: #455587;
   margin: 1rem 0 0 0;
   &:hover{
     cursor:pointer;
@@ -25,6 +28,6 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #4f4f4f;
+  color: #455587;
   margin: 0;
 }

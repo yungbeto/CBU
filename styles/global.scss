@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;600&display=swap");
+
 @import "./breakpoints.scss";
 
 html,
@@ -10,7 +11,8 @@ body {
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   line-height: 1.6;
   font-size: 16px;
-  background: #fff;
+  background: #D6E7EC;
+  color: #455587;
   background-size: cover;
   overscroll-behavior: none;
 }
@@ -26,7 +28,8 @@ body {
 
 a,
 button {
-  color: #0070f3;
+  color: #455587;
+  background-color: #EDC0CD;
   text-decoration: none;
 }
 

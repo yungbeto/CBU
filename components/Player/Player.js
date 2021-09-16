@@ -1,13 +1,12 @@
-
 import styles from "./Player.module.scss";
 import Play from "../../components/Icons/Play"
 import Pause from "../../components/Icons/Pause"
 import { useSelector } from 'react-redux';
 import Plyr from 'plyr-react';
-import 'plyr-react/dist/plyr.css'
 
 export default function Player(props) {
 
+  const isPlaying = useSelector((state) => state.isPlaying.value);
   const songPlaying = useSelector((state) => state.isPlaying.isCurrentlyPlaying);
   const songUrl = useSelector((state) => state.isPlaying.songUrl)
   const plyrSource = {
@@ -20,15 +19,17 @@ export default function Player(props) {
     }]
   };
   return (
-    <section className={styles.player}>
-      <p>{songPlaying}</p>
-      <p>{songUrl}</p>
+
+    
+    <section className={!isPlaying ? `${styles.player_notPlaying}` : `${styles.player}` } >
+      <p className={styles.title}>{songPlaying}</p>
       <Plyr
         source={plyrSource}
         autoPlay='true'
       />
 
     </section>
+    
   );
 
 }
