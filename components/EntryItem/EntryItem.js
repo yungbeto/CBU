@@ -10,16 +10,19 @@ const EntryItem = (props) => {
     console.log(props)
     // const [isExpanded, setIsExpanded] = useState(expand);
     // const [isPlaying, setIsPlaying] = useState('');
-    const isPlaying = useSelector((state) => state.isPlaying.value);
+    // const isPlaying = useSelector((state) => state.isPlaying.value);
+    const songUrl = useSelector((state) => state.isPlaying.songUrl);
+    
+    const showPlayButton = songUrl !== props.url || songUrl === ''
     const dispatch = useDispatch()
 
     return(
         <li key={props.url} className={styles.container}>
             <div className={styles.first}>
-            {!isPlaying ?
-            <button className={styles.button} onClick={() => dispatch(play({title: props.title, url: props.url}))}><Play /></button>
+            {showPlayButton ?
+                <button className={styles.button} onClick={() => dispatch(play({title: props.title, url: props.url}))}><Play /></button>
             :
-            <button className={styles.button} onClick={() => dispatch(stop(props.title))}><Stop /></button>
+                <button className={styles.button} onClick={() => dispatch(stop(props.title))}><Stop /></button>
              }
              <Link href={props.url}>
                  <button className={styles.button}>
