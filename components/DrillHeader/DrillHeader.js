@@ -6,6 +6,10 @@ export default function DrillHeader() {
 
   return (
     <header className={styles.header}>
+        <div className={styles.top}>
+
+        🌴 Cool Breeze Unlimited
+        </div>
       <Link href="/">
         <p className={styles.heading}>← Back</p>
       </Link>
