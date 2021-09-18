@@ -15,6 +15,7 @@ const EntryItem = (props) => {
     
     const showPlayButton = songUrl !== props.url || songUrl === ''
     const dispatch = useDispatch()
+    console.log(props.info)
 
     return(
         <li key={props.url} className={styles.container}>
@@ -31,11 +32,14 @@ const EntryItem = (props) => {
              </Link>
             </div>
             <div className= {styles.secondOpen}>
-                
+            <Link href={`/mixes/${props.id}`} >
                 <h3 className={styles.title}>{props.title}</h3>
+                </Link>
             
                 <h6 className={styles.date}>{props.date}</h6>
                 <p className= {styles.bodyOpen}>{props.info}</p>
+                <div dangerouslySetInnerHTML={{ __html: props.contentHtml }} />
+
                 <Link href={`/mixes/${props.id}`} >
                 <p className= {styles.seemore}>See more</p>
                 </Link>

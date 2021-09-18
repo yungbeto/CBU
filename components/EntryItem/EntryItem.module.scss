@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,700&display=swap");
 
 .container {
   background: #D6E7EC;
@@ -60,11 +60,12 @@
 }
 
 .title {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Source Code Pro', monospace;
   font-weight: 600;
   font-size: 1.5rem;
   line-height: 2rem;
   margin: 0;
+  cursor: pointer;
 }
 .date {
   font-size: 0.8rem;
@@ -95,7 +96,6 @@
 
 .seemore {
   display: inline;
-  font-family: IBM Plex Mono;
   margin-top: 1rem;
   border: none;
   padding: 0;

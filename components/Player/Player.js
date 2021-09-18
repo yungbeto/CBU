@@ -3,8 +3,9 @@ import Play from "../../components/Icons/Play"
 import Pause from "../../components/Icons/Pause"
 import { useSelector } from 'react-redux';
 import Plyr from 'plyr-react';
+import React from 'react'
 
-export default function Player() {
+const Player = () => {
   const isPlaying = useSelector((state) => state.isPlaying.value);
   const songPlaying = useSelector((state) => state.isPlaying.isCurrentlyPlaying);
   const songUrl = useSelector((state) => state.isPlaying.songUrl)
@@ -18,7 +19,7 @@ export default function Player() {
     }]
   };
   return (
-    <section className={!isPlaying ? `${styles.player_notPlaying}` : `${styles.player}` } >
+    <section className={!songPlaying ? `${styles.player_notPlaying}` : `${styles.player}` } >
       <p className={styles.title}>{songPlaying}</p>
       <Plyr
         source={plyrSource}
@@ -29,4 +30,6 @@ export default function Player() {
   );
 
 }
+
+export default React.memo(Player);
 

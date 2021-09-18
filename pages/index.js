@@ -25,8 +25,8 @@ export default function Home({ allPostsData }) {
           <title>{siteTitle}</title>
         </Head>
         <ul className={styles.list}>
-          {allPostsData.map(({ slug, date, title, url, id }, index) => (
-            <EntryItem url={url} title={title} date={date} info={slug} id={id} index={index} />
+          {allPostsData.map(({ slug, date, title, url, id, contentHtml }, index) => (
+            <EntryItem url={url} title={title} date={date} info={slug} id={id} index={index} content={contentHtml} />
           ))}
         </ul>
       </Layout>
