@@ -41,7 +41,7 @@ const EntryItem = (props) => {
                 <div dangerouslySetInnerHTML={{ __html: props.contentHtml }} />
 
                 <Link href={`/mixes/${props.id}`} >
-                <p className= {styles.seemore}>See more</p>
+                <p className= {styles.seemore}>Tracklist →</p>
                 </Link>
             </div>
         </li>

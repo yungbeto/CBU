@@ -58,7 +58,6 @@ export default function Post({ postData }) {
                      <Download /> Download
                      </button> 
              </Link>
-      <p className={styles.tracklistHeader}>Tracklist:</p>
       
         <div className={styles.tracklist} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       

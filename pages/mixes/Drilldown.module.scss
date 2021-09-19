@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@700&display=swap');
 .title {
-  font-size: 20px;
+  font-size: 28px;
   line-height: 32px;
    
   margin: 16px 0 0px 0;
@@ -10,7 +10,7 @@
   font-size: .9rem;
   line-height: 1rem;
   font-weight: 400;
-  margin: 0 0 24px 0;
+  margin: 4px 0 24px 0;
 }
 
 .button {
@@ -30,15 +30,64 @@
 }
 
 .tracklistHeader {
+    display: block;
     font-family: 'Source Code Pro', monospace;
     font-weight: 600;
-    font-size: 1rem;
-     
+    font-size: 1rem;     
     line-height: 1.5rem;
     color: #455587;
     margin: 1rem 0 0rem 0;
+    padding: 1rem 0 0 0;
 }
 
 .tracklist > p{
     margin:0;
+
+}
+
+.tracklist{
+    margin-top: 24px;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(69, 85, 135, .1);
+    hr {
+        opacity: .1;
+        border-top: 1px solid #455587;
+        border-bottom: none;
+        margin-bottom: 24px;
+    }
+    ol {
+        list-style-position: inside;
+        margin: 0;
+        list-style-position: inside;
+        margin: 0;
+        padding: 0;
+        line-height: 24px;
+
+        li {
+            margin-bottom: 24px;
+        }
+
+        ul  {
+            list-style: none;
+            list-style-type: none;
+            list-style-position: inside;
+            margin: 8px 0 0 0;
+            padding: 0;
+            & :first-child {
+                font-weight: bold;
+                font-size: 18px;
+                line-height: 22px;
+
+
+            }
+
+            li {
+                list-style-type: none;
+                list-style-position: inside;
+                margin: 0;
+                padding: 0;
+                font-weight: normal;
+            }
+        }
+    }
 }
