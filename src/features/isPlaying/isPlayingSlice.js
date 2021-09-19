@@ -11,11 +11,12 @@ export const isPlayingSlice = createSlice({
     initialState,
     reducers:{
         play: (state, action) =>{
-            const { title, url} = action.payload
+            const { title, url, id} = action.payload
             console.log('state: ',state)
             console.log("action: ",action)
             state.isCurrentlyPlaying = title
             state.songUrl = url
+            state.songId = id
 
             state.value = !state.value
         },

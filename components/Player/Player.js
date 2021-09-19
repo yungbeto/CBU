@@ -1,14 +1,13 @@
 import styles from "./Player.module.scss";
-import Play from "../../components/Icons/Play"
-import Pause from "../../components/Icons/Pause"
 import { useSelector } from 'react-redux';
 import Plyr from 'plyr-react';
 import React from 'react'
+import Link from "next/link";
 
 const Player = () => {
-  const isPlaying = useSelector((state) => state.isPlaying.value);
   const songPlaying = useSelector((state) => state.isPlaying.isCurrentlyPlaying);
   const songUrl = useSelector((state) => state.isPlaying.songUrl)
+  const songId = useSelector((state) => state.isPlaying.songId)
   const plyrSource = {
     type: 'audio',
     options: [{
@@ -20,7 +19,10 @@ const Player = () => {
   };
   return (
     <section className={!songPlaying ? `${styles.player_notPlaying}` : `${styles.player}` } >
+<Link href={`/mixes/${songId}`} >
+
       <p className={styles.title}>{songPlaying}</p>
+</Link>
       <Plyr
         source={plyrSource}
         autoPlay='true'

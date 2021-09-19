@@ -21,7 +21,7 @@ const EntryItem = (props) => {
         <li key={props.url} className={styles.container}>
             <div className={styles.first}>
             {showPlayButton ?
-                <button className={styles.button} onClick={() => dispatch(play({title: props.title, url: props.url}))}><Play /></button>
+                <button className={styles.button} onClick={() => dispatch(play({title: props.title, url: props.url, id: props.id}))}><Play /></button>
             :
                 <button className={styles.button} onClick={() => dispatch(stop(props.title))}><Stop /></button>
              }
