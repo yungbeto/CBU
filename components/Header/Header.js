@@ -10,7 +10,6 @@ export default function Header() {
             '/gifs/cbu03.gif',
             '/gifs/cbu04.gif',
             '/gifs/cbu05.gif',
-            '/gifs/cbu06.gif',
             '/gifs/cbu07.gif'
         ]
 
