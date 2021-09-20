@@ -13,7 +13,7 @@ export default function Layout({ children, home }) {
           <link rel="icon" href="/favicon.ico" />
           <meta
             name="description"
-            content="Cool Breeze Unlimited is a mix series by Doris Saturday that fosters positive beach energy."
+            content="Cool Breeze Unlimited is a mix series by Roby Saavedra that fosters positive beach energy."
           />
           <meta name="og:title" content={siteTitle} />
           <meta name="twitter:card" content="summary_large_image" />
