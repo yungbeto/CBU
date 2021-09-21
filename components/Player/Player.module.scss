@@ -7,6 +7,9 @@
   bottom: 0px;
   background: #D6E7EC;
   border-top: 1px solid #455587;
+  animation-direction: alternate;
+  animation: slideInUp;
+  animation-duration: .5s;
   
   // @media (min-width: 560px) {
   //   width: 32rem;
@@ -26,6 +29,8 @@
   bottom: -80px;
   background: #D6E7EC;
   border-top: 1px solid #455587;
+  animation: slideOutDown;
+  animation-duration: .5s;
 }
 
 .title {
@@ -36,4 +41,34 @@
   &:hover {
     background-color: #EDC0CD;
   }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInUp {
+  animation-name: slideInUp;
+}
+
+@keyframes slideOutDown {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    visibility: hidden;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+.slideOutDown {
+  animation-name: slideOutDown;
 }
