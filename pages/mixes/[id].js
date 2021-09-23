@@ -1,4 +1,5 @@
 import Layout from "../../components/layout";
+import Head from "next/head";
 import Link from "next/dist/client/link";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import { useSelector, useDispatch } from "react-redux";
@@ -33,6 +34,11 @@ export default function Post({ postData }) {
 
   return (
     <Layout>
+      <Head>
+        <title>
+          {postData.title}
+        </title>
+      </Head>
       <h1 className={styles.title}>{postData.title}</h1>
       <p className={styles.subtitle}>{postData.date}</p>
 
