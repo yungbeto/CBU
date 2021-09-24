@@ -12,7 +12,6 @@ export default function Header() {
             '/gifs/cbu05.gif',
             '/gifs/cbu06.gif',
             '/gifs/cbu07.gif',
-            '/gifs/cbu08.gif',
             '/gifs/cbu09.gif',
             '/gifs/cbu10.gif',
             '/gifs/cbu11.gif'
@@ -31,6 +30,7 @@ const name = 'Cool Breeze Unlimited'
                     height={144}
                     width={144}
                     alt={name}
+                    objectFit='cover'
                 />
                 <Link href='/'>
 
