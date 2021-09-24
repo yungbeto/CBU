@@ -9,7 +9,7 @@ export default function DrillHeader() {
         <Link href="/">🌴 Cool Breeze Unlimited</Link>
       </div>
       <Link href="/">
-        <p className={styles.heading}>← Back</p>
+        <p className={styles.heading}>←</p>
       </Link>
     </header>
   );
