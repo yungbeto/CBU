@@ -39,22 +39,25 @@ export default function Post({ postData }) {
           {postData.title}
         </title>
       </Head>
+      <div className={styles.mixBox}>
+
       <h1 className={styles.title}>{postData.title}</h1>
       <p className={styles.subtitle}>{postData.date}</p>
+      <div className={styles.buttonContainer}>
 
       {showPlayButton ? (
         <button
-          className={styles.button}
-          onClick={() =>
-            dispatch(play({ title: postData.title, url: postData.url }))
-          }
+        className={styles.button}
+        onClick={() =>
+          dispatch(play({ title: postData.title, url: postData.url }))
+        }
         >
           <Play /> Play
         </button>
       ) : (
         <button
-          className={styles.button}
-          onClick={() => dispatch(stop(postData.title))}
+        className={styles.button}
+        onClick={() => dispatch(stop(postData.title))}
         >
           <Stop /> Stop
         </button>
@@ -65,8 +68,10 @@ export default function Post({ postData }) {
                      </button> 
              </Link>
       
+      </div>
         <div className={styles.tracklist} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       
+      </div>
     </Layout>
   );
 }

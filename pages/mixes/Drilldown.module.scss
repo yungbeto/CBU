@@ -3,14 +3,23 @@
   font-size: 28px;
   line-height: 32px;
    
-  margin: 16px 0 0px 0;
+  margin: 1.5rem 0 0px 1.5rem;
+}
+
+.mixBox {
+    border: solid 1px #455587;
+    margin-bottom: 1.5rem;
 }
 
 .subtitle {
   font-size: .9rem;
   line-height: 1rem;
   font-weight: 400;
-  margin: 4px 0 24px 0;
+  margin: 4px 0 1.5rem 1.5rem;
+}
+
+.buttonContainer {
+    margin-left: 1rem;
 }
 
 .button {
@@ -46,14 +55,14 @@
 }
 
 .tracklist{
-    margin-top: 24px;
+    margin-top: 1.5rem;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(69, 85, 135, .1);
+    border-top: 1px solid #455587;
     hr {
-        opacity: .1;
+        
         border-top: 1px solid #455587;
         border-bottom: none;
-        margin-bottom: 24px;
+        margin-bottom: 1.5rem;
     }
     ol {
         list-style-position: inside;
@@ -62,6 +71,7 @@
         margin: 0;
         padding: 0;
         line-height: 24px;
+        margin-left: 1.5rem;
 
         li {
             margin-bottom: 24px;
