@@ -31,7 +31,7 @@ const name = 'Cool Breeze Unlimited'
 
                 <h1 className={styles.heading}>{name}</h1>
                 </Link>
-                <p className={styles.subheading}>A series of mixes by <a href="https://dorissaturday.bandcamp.com/" target="_blank">Roby Saavedra</a> fostering positive beach energy</p>
+                <p className={styles.subheading}>Music for imaginary shores. Mixes by <a href="https://dorissaturday.bandcamp.com/" target="_blank">Roby Saavedra</a> fostering positive beach energy</p>
     </header>
     )
 };
