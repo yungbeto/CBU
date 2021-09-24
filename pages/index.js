@@ -19,7 +19,7 @@ export default function Home({ allPostsData }) {
   const isPlaying = useSelector((state) => state.isPlaying.value);
   return (
     
-    <section className={!isPlaying ? `${styles.container_notPlaying}` : `${styles.container}`}>
+    // <section className={!isPlaying ? `${styles.container_notPlaying}` : `${styles.container}`}>
       <Layout home>
         <Head>
           <title>{siteTitle}</title>
@@ -30,6 +30,6 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </Layout>
-    </section>
+    // </section>
   );
 }

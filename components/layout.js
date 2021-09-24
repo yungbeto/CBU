@@ -1,13 +1,15 @@
 import Head from "next/head";
 import Header from "./Header";
 import DrillHeader from "./DrillHeader";
-import styles from "./layout.module.css";
+import styles from "./layout.module.scss";
+import { useSelector } from "react-redux";
 
 export const siteTitle = "🎷 Cool Breeze Unlimited";
 
 export default function Layout({ children, home }) {
+  const songPlaying = useSelector((state) => state.isPlaying.isCurrentlyPlaying);
   return (
-    <div className={styles.container}>
+    <div className={!songPlaying ? `${styles.container}` : `${styles.activeContainer}`}>
       <div className={styles.inner}>
         <Head>
           <link rel="icon" href="/favicon.ico" />
