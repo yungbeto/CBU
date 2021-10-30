@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  padding: 0 1rem 1rem 1rem;
+  padding: 0;
   margin: 0 auto 2rem;
   height: 100%;
   overflow-y: scroll;
@@ -8,17 +8,20 @@
 }
 
 .activeContainer{
-  height: calc(100vh - 6rem);
+  height: calc(100vh - 110.6px);
   width: 100%;
-  padding: 0 1rem 1rem 1rem;
+  padding: 0;
   margin: 0 auto 2rem;
   overflow-y: scroll;
 }
 
-
 .inner {
-  max-width: 60rem;
-  margin: 0 auto;
+  margin: 0 1rem;
+  @media(min-width: 60rem){
+    margin: 0 auto;
+  }
+    
+  
 }
 
 .header {

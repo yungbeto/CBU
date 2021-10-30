@@ -96,16 +96,17 @@
 .seemore {
   display: inline;
   margin-top: 1rem;
+  margin-left: -8px;
   border: none;
-  padding: 0;
+  padding: 8px;
   background: none;
   font-size: 1rem;
   line-height: 1.5rem;
-  text-decoration: underline;
+  border-radius: 8px;
   cursor: pointer;
 
   &:hover {
-    background-color: #EDC0CD;
+    background-color: #EDC0CD80;
     text-decoration: none;
   }
 }

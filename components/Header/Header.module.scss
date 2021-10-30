@@ -6,6 +6,11 @@
   align-items: flex-start;
   color: #455587;
   padding-top: 1.5rem;
+  margin: auto;
+  @media (min-width: 560px) {
+    max-width: 60rem;
+    margin:auto;
+  }
 }
 .gif {
   width: 6rem;

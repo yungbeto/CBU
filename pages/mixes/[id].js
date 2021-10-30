@@ -39,7 +39,11 @@ export default function Post({ postData }) {
           {postData.title}
         </title>
       </Head>
+
+      <section className={styles.inner}>
       <div className={styles.mixBox}>
+      <div className={styles.mixHead}>
+
 
       <h1 className={styles.title}>{postData.title}</h1>
       <p className={styles.subtitle}>{postData.date}</p>
@@ -69,9 +73,12 @@ export default function Post({ postData }) {
              </Link>
       
       </div>
+      </div>
+
         <div className={styles.tracklist} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       
       </div>
+      </section>
     </Layout>
   );
 }

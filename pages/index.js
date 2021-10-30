@@ -24,11 +24,13 @@ export default function Home({ allPostsData }) {
         <Head>
           <title>{siteTitle}</title>
         </Head>
+        <div className={styles.inner}> 
         <ul className={styles.list}>
           {allPostsData.map(({ slug, date, title, url, id, contentHtml }, index) => (
             <EntryItem url={url} title={title} date={date} info={slug} id={id} index={index} content={contentHtml} />
-          ))}
+            ))}
         </ul>
+            </div>
       </Layout>
     // </section>
   );

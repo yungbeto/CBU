@@ -36,10 +36,12 @@
 .title {
   display: inline-flex;
   margin-left: 1rem;
+  padding: 8px;
+  border-radius: 8px;
   margin-bottom: 0;
   cursor: pointer;
   &:hover {
-    background-color: #EDC0CD;
+    background-color: #EDC0CD80;
   }
 }
 

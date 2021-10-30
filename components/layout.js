@@ -10,7 +10,6 @@ export default function Layout({ children, home }) {
   const songPlaying = useSelector((state) => state.isPlaying.isCurrentlyPlaying);
   return (
     <div className={!songPlaying ? `${styles.container}` : `${styles.activeContainer}`}>
-      <div className={styles.inner}>
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta
@@ -23,8 +22,9 @@ export default function Layout({ children, home }) {
         {home ? 
         <Header /> : <DrillHeader />
       }
+      <section className={styles.inner}>
         <main>{children}</main>
-      </div>
+      </section>
     </div>
   );
 }

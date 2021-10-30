@@ -2,26 +2,31 @@
 .title {
   font-size: 28px;
   line-height: 32px;
-   
-  margin: 0 0 0px 1.5rem;
+  margin: 0;
+}
+
+.inner {
+
+        max-width: 60rem;
+        margin: 1rem auto;
 }
 
 .mixBox {
     border: solid 1px #455587;
-    border-top:none;
-    margin-bottom: 1.5rem;
-    padding-top: 1.5rem;
 }
 
+.mixHead {
+    background-color: #EDEAC0;
+    padding: 1.5rem;
+}
 .subtitle {
   font-size: .9rem;
   line-height: 1rem;
   font-weight: 400;
-  margin: 4px 0 1.5rem 1.5rem;
+  margin: 4px 0 1.5rem 0;
 }
-
-.buttonContainer {
-    margin-left: 1rem;
+.buttonContainer{
+    margin-left:-8px;
 }
 
 .button {
@@ -35,7 +40,7 @@
   display: inline-flex;
   margin-right: 8px;
   &:hover {
-    background-color: #EDC0CD;
+    background-color: #EDC0CD80;
     text-decoration: none;
   }
 }
@@ -57,7 +62,7 @@
 }
 
 .tracklist{
-    margin-top: 1.5rem;
+
     padding-top: 1.5rem;
     border-top: 1px solid #455587;
     hr {
