@@ -35,49 +35,46 @@ export default function Post({ postData }) {
   return (
     <Layout>
       <Head>
-        <title>
-          {postData.title}
-        </title>
+        <title>{postData.title}</title>
       </Head>
 
       <section className={styles.inner}>
-      <div className={styles.mixBox}>
-      <div className={styles.mixHead}>
+        <div className={styles.mixBox}>
+          <div className={styles.mixHead}>
+            <h1 className={styles.title}>{postData.title}</h1>
+            <p className={styles.subtitle}>{postData.date}</p>
+            <p>{postData.slug}</p>
+            <div className={styles.buttonContainer}>
+              {showPlayButton ? (
+                <button
+                  className={styles.button}
+                  onClick={() =>
+                    dispatch(play({ title: postData.title, url: postData.url }))
+                  }
+                >
+                  <Play /> Play
+                </button>
+              ) : (
+                <button
+                  className={styles.button}
+                  onClick={() => dispatch(stop(postData.title))}
+                >
+                  <Stop /> Stop
+                </button>
+              )}
+              <Link href={postData.url}>
+                <button className={styles.button}>
+                  <Download /> Download
+                </button>
+              </Link>
+            </div>
+          </div>
 
-
-      <h1 className={styles.title}>{postData.title}</h1>
-      <p className={styles.subtitle}>{postData.date}</p>
-      <div className={styles.buttonContainer}>
-
-      {showPlayButton ? (
-        <button
-        className={styles.button}
-        onClick={() =>
-          dispatch(play({ title: postData.title, url: postData.url }))
-        }
-        >
-          <Play /> Play
-        </button>
-      ) : (
-        <button
-        className={styles.button}
-        onClick={() => dispatch(stop(postData.title))}
-        >
-          <Stop /> Stop
-        </button>
-      )}
-                   <Link href={postData.url}>
-                 <button className={styles.button}>
-                     <Download /> Download
-                     </button> 
-             </Link>
-      
-      </div>
-      </div>
-
-        <div className={styles.tracklist} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      
-      </div>
+          <div
+            className={styles.tracklist}
+            dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+          />
+        </div>
       </section>
     </Layout>
   );
