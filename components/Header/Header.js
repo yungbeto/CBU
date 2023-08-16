@@ -14,7 +14,8 @@ export default function Header() {
             '/gifs/cbu07.gif',
             '/gifs/cbu09.gif',
             '/gifs/cbu10.gif',
-            '/gifs/cbu11.gif'
+            '/gifs/cbu11.gif',
+            '/gifs/cbu12.gif'
         ]
 
 
@@ -36,7 +37,7 @@ const name = 'Cool Breeze Unlimited'
 
                 <h1 className={styles.heading}>{name}</h1>
                 </Link>
-                <p className={styles.subheading}>Music for imaginary shores compiled by <a href="https://dorissaturday.bandcamp.com/" target="_blank">&nbsp;Roby Saavedra&nbsp;</a>.</p>
+                <p className={styles.subheading}>Music for imaginary shores compiled by <a href="https://robysaavedra.com" target="_blank">&nbsp;Roby Saavedra&nbsp;</a>.</p>
     </header>
     )
 };
